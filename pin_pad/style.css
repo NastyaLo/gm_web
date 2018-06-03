@@ -114,7 +114,7 @@
   justify-self: end;
 }
 
-.screen__button__0 {
+.screen__button--0 {
   grid-column: 2 / 3;
 }
 
