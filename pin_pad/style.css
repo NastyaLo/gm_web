@@ -80,6 +80,15 @@
 
   background-color: rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+
+  color: var(--text);
+  font-family: "no_name";
+  font-size: 28px;
+  font-weight: 300;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .screen__buttons {
@@ -114,11 +123,11 @@
   justify-self: end;
 }
 
-.screen__button--0 {
+#screen__button--0 {
   grid-column: 2 / 3;
 }
 
-.screen__button__arrow {
+#screen__button__arrow {
   grid-column: 3 / 4;
   width: 19px;
   height: 19px;
