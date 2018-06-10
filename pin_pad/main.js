@@ -23,7 +23,7 @@ one.onclick = function () {
     screenInput.push(1);
     console.log("1");
   }
-}
+} 
 
 two.onclick = function () {
   if (screenInput.lenght < 4) {
