@@ -84,28 +84,35 @@ fix.onclick = function () {
   }
 }
 
+cell_1.focus();
+cell_2.focus();
+cell_3.focus();
+cell_4.focus();
+
 setInterval(function() {
-  if (screenInput[0] > 0 && screenInput[0] != undefined) {
-    cell_1.innerHTML = screenInput[0];
-  } else if (screenInput[0] == undefined) {
-    cell_1.innerHTML = " ";
-  }
+  if (screenInput[0] > -1 && screenInput[0] != undefined) {
+    cell_1.value = screenInput[0];
+  } /*else if (screenInput[0] == undefined) {
+    cell_1.value = " ";
+  }*/
 
-  if (screenInput[1] > 0 && screenInput[1] != undefined) {
-    cell_2.innerHTML = screenInput[1];
-  } else if (screenInput[1] == undefined) {
-    cell_2.innerHTML = " ";
-  }
+  if (screenInput[1] > -1 && screenInput[1] != undefined) {
+    cell_2.value = screenInput[1];
+  } /*else if (screenInput[1] == undefined) {
+    cell_2.value = " ";
+  }*/
 
-  if (screenInput[2] > 0 && screenInput[2] != undefined) {
-    cell_3.innerHTML = screenInput[2];
-  }  else if (screenInput[2] == undefined) {
-    cell_3.innerHTML = " ";
-  }
+  if (screenInput[2] > -1 && screenInput[2] != undefined) {
+    cell_3.value = screenInput[2];
+  }  /*else if (screenInput[2] == undefined) {
+    cell_3.value = " ";
+  }*/
 
-  if (screenInput[3] > 0 && screenInput[3] != undefined) {
-    cell_4.innerHTML = screenInput[3];
-  } else if (screenInput[3] == undefined) {
-    cell_4.innerHTML = " ";
-  }
+  if (screenInput[3] > -1 && screenInput[3] != undefined) {
+    cell_4.value = screenInput[3];
+  }/* else if (screenInput[3] == undefined) {
+    cell_4.value = " ";
+  }*/
 }, 1);
+
+// TODO: сделать считывание input в массив пинкода, из-за input вместо div пофиксить стирание элементов
