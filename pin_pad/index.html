@@ -16,10 +16,11 @@
           <div class="screen__pin-panel__title">Введите ПИНКОД</div>
           <img src="../images/top-arrow.png" class="arrow">
           <div class="screen__input">
-            <input type="text" maxlength="1" class="screen__cell" id="screen__cell--1">
-            <input type="text" maxlength="1" class="screen__cell" id="screen__cell--2">
-            <input type="text" maxlength="1" class="screen__cell" id="screen__cell--3">
-            <input type="text" maxlength="1" class="screen__cell" id="screen__cell--4">
+            <div type="text" class="screen__cell"></div>
+            <div type="text" class="screen__cell"></div>
+            <div type="text" class="screen__cell"></div>
+            <div type="text" class="screen__cell"></div>
+            <input type="text" onkeypress='validate(event)' maxlength="4" class="screen__cell__input" id="screen__cell__input">
           </div>
           <div class="screen__buttons">
             <div class="screen__button screen__button__column--1" id="screen__button--1">1</div>

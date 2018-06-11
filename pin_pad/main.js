@@ -10,109 +10,94 @@ var one       = document.getElementById("screen__button--1"),
     zero      = document.getElementById("screen__button--0"),
     fix       = document.getElementById("screen__button__arrow");
 
-var cell_1      = document.getElementById("screen__cell--1"),
-    cell_2      = document.getElementById("screen__cell--2"),
-    cell_3      = document.getElementById("screen__cell--3"),
-    cell_4      = document.getElementById("screen__cell--4");
+var cell      = document.getElementById("screen__cell__input");
 
-var screenInput = [];
+var screenInput = "";
 console.log(screenInput.length);
 
 one.onclick = function () {
   if (screenInput.length < 4) {
-    screenInput.push(1);
+    screenInput += 1;
   }
 }
 
 two.onclick = function () {
   if (screenInput.length < 4) {
-    screenInput.push(2);
+    screenInput += 2;
   }
 }
 
 three.onclick = function () {
   if (screenInput.length < 4) {
-    screenInput.push(3);
+    screenInput += 3;
   }
 }
 
 four.onclick = function () {
   if (screenInput.length < 4) {
-    screenInput.push(4);
+    screenInput += 4;
   }
 }
 
 five.onclick = function () {
   if (screenInput.length < 4) {
-    screenInput.push(5);
+    screenInput += 5;
   }
 }
 
 six.onclick = function () {
   if (screenInput.length < 4) {
-    screenInput.push(6);
+    screenInput += 6;
   }
 }
 
 seven.onclick = function () {
   if (screenInput.length < 4) {
-    screenInput.push(7);
+    screenInput += 7;
   }
 }
 
 eight.onclick = function () {
   if (screenInput.length < 4) {
-    screenInput.push(8);
+    screenInput += 8;
   }
 }
 
 nine.onclick = function () {
   if (screenInput.length < 4) {
-    screenInput.push(9);
+    screenInput += 9;
   }
 }
 
 zero.onclick = function () {
   if (screenInput.length < 4) {
-    screenInput.push(0);
+    screenInput += 0;
   }
 }
 
 fix.onclick = function () {
   if (screenInput.length > 0) {
-    screenInput.pop();
+    screenInput = screenInput.substring(0, 3);
   }
 }
 
-cell_1.focus();
-cell_2.focus();
-cell_3.focus();
-cell_4.focus();
+cell.focus();
 
 setInterval(function() {
-  if (screenInput[0] > -1 && screenInput[0] != undefined) {
-    cell_1.value = screenInput[0];
-  } /*else if (screenInput[0] == undefined) {
-    cell_1.value = " ";
-  }*/
+  cell.value = screenInput.toString();
+}, 10);//почему-то удаляет все к хуям при обновлении
+// потому что из инпута не заносит в переменную
 
-  if (screenInput[1] > -1 && screenInput[1] != undefined) {
-    cell_2.value = screenInput[1];
-  } /*else if (screenInput[1] == undefined) {
-    cell_2.value = " ";
-  }*/
+function validate(evt) {//содрано со stackoverflow
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
 
-  if (screenInput[2] > -1 && screenInput[2] != undefined) {
-    cell_3.value = screenInput[2];
-  }  /*else if (screenInput[2] == undefined) {
-    cell_3.value = " ";
-  }*/
-
-  if (screenInput[3] > -1 && screenInput[3] != undefined) {
-    cell_4.value = screenInput[3];
-  }/* else if (screenInput[3] == undefined) {
-    cell_4.value = " ";
-  }*/
-}, 1);
-
-// TODO: сделать считывание input в массив пинкода, из-за input вместо div пофиксить стирание элементов
+// TODO: сделать считывание input в массив пинкода
+// из-за input вместо div пофиксить стирание элементов
