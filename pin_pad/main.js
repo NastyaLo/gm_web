@@ -15,8 +15,7 @@ var cell1      = document.getElementById("screen__cell--1"),
     cell3      = document.getElementById("screen__cell--3"),
     cell4      = document.getElementById("screen__cell--4");
 
-var timely    = "",
-    currentInput = 0;
+cell1.focus();
 
 one.onclick = function() {
   if(cell1.value === "") {
@@ -178,7 +177,7 @@ zero.onclick = function() {
   }
 }
 
-fix.onclick = function() {
+function correction() {
   if (cell1.value && cell2.value && cell3.value && cell4.value) {
     cell4.value = "";
     cell4.focus();
@@ -191,6 +190,32 @@ fix.onclick = function() {
   } else if (cell1.value) {
     cell1.value = "";
     cell1.focus();
+  }
+}
+
+fix.onclick = function() {
+  correction();
+}
+
+document.onkeyup = function (e) {
+  if (e.keyCode == 8) {
+    correction();
+  } else if (e.keyCode >= 48 && e.keyCode <= 57) {
+
+    if (cell1.value && cell2.value && cell3.value) {
+      console.log("focus on 4");
+      cell4.focus();
+    } else if (cell1.value && cell2.value) {
+      console.log("focus on 3");
+      cell3.focus();
+    } else if (cell1.value){
+      console.log("focus on 2");
+      cell2.focus();
+    } else {
+      console.log("focus on 1");
+      cell1.focus();
+    }
+
   }
 }
 
