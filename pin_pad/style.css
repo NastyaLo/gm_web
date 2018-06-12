@@ -78,32 +78,21 @@
   width: 30px;
   height: 40px;
 
-  border: none;
-  outline: none;
-
-  background-color: rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
-}
-
-#screen__cell__input {
-  display: flex;
-  align-items: center;
-  position: absolute;
-  z-index: 3;
-
-  left: 351px;
-  top: 269px;
+  padding: 0;
 
   border: none;
   outline: none;
   background: none;
 
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+
+  text-align: center;
   color: transparent;
   text-shadow: 0 0 0 #cbe1df;
   font-family: "no_name";
   font-size: 28px;
   font-weight: 300;
-  letter-spacing: 0.77em;
 }
 
 .screen__buttons {

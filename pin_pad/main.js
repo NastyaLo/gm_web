@@ -10,115 +10,188 @@ var one       = document.getElementById("screen__button--1"),
     zero      = document.getElementById("screen__button--0"),
     fix       = document.getElementById("screen__button__arrow");
 
-var cell      = document.getElementById("screen__cell__input");
-var timely    = "";
+var cell1      = document.getElementById("screen__cell--1"),
+    cell2      = document.getElementById("screen__cell--2"),
+    cell3      = document.getElementById("screen__cell--3"),
+    cell4      = document.getElementById("screen__cell--4");
 
-cell.focus();
+var timely    = "",
+    currentInput = 0;
 
-one.onclick = function () {
-  if (timely.length < 4) {
-    timely = cell.value;
-    timely += 1;
-    cell.value = timely;
-  }
-
-  cell.focus();
-}
-
-two.onclick = function () {
-  if (timely.length < 4) {
-    timely = cell.value;
-    timely += 2;
-    cell.value = timely;
-  }
-
-  cell.focus();
-}
-
-three.onclick = function () {
-  if (timely.length < 4) {
-    timely = cell.value;
-    timely += 3;
-    cell.value = timely;
-  }
-
-  cell.focus();
-}
-
-four.onclick = function () {
-  if (timely.length < 4) {
-    timely = cell.value;
-    timely += 4;
-    cell.value = timely;
-  }
-
-  cell.focus();
-}
-
-five.onclick = function () {
-  if (timely.length < 4) {
-    timely = cell.value;
-    timely += 5;
-    cell.value = timely;
-  }
-
-  cell.focus();
-}
-
-six.onclick = function () {
-  if (timely.length < 4) {
-    timely = cell.value;
-    timely += 6;
-    cell.value = timely;
+one.onclick = function() {
+  if(cell1.value === "") {
+    cell1.value = 1;
+    cell2.focus();
+  } else if (cell2.value === "") {
+    cell2.value = 1;
+    cell3.focus();
+  } else if (cell3.value === "") {
+    cell3.value = 1;
+    cell4.focus();
+  } else if (cell4.value === "") {
+    cell4.value = 1;
+    cell4.focus();
   }
 }
 
-seven.onclick = function () {
-  if (timely.length < 4) {
-    timely = cell.value;
-    timely += 7;
-    cell.value = timely;
-  }
-
-  cell.focus();
-}
-
-eight.onclick = function () {
-  if (timely.length < 4) {
-    timely = cell.value;
-    timely += 8;
-    cell.value = timely;
-  }
-
-  cell.focus();
-}
-
-nine.onclick = function () {
-  if (timely.length < 4) {
-    timely = cell.value;
-    timely += 9;
-    cell.value = timely;
+two.onclick = function() {
+  if(cell1.value === "") {
+    cell1.value = 2;
+    cell2.focus();
+  } else if (cell2.value === "") {
+    cell2.value = 2;
+    cell3.focus();
+  } else if (cell3.value === "") {
+    cell3.value = 2;
+    cell4.focus();
+  } else if (cell4.value === "") {
+    cell4.value = 2;
+    cell4.focus();
   }
 }
 
-zero.onclick = function () {
-  if (timely.length < 4) {
-    timely = cell.value;
-    timely += 0;
-    cell.value = timely;
+three.onclick = function() {
+  if(cell1.value === "") {
+    cell1.value = 3;
+    cell2.focus();
+  } else if (cell2.value === "") {
+    cell2.value = 3;
+    cell3.focus();
+  } else if (cell3.value === "") {
+    cell3.value = 3;
+    cell4.focus();
+  } else if (cell4.value === "") {
+    cell4.value = 3;
+    cell4.focus();
   }
-
-  cell.focus();
 }
 
-fix.onclick = function () {
-  if (timely.length <= 4) {
-    timely = cell.value;
-    timely = timely.substring(0, timely.length-1);
-    cell.value = timely;
+four.onclick = function() {
+  if(cell1.value === "") {
+    cell1.value = 4;
+    cell2.focus();
+  } else if (cell2.value === "") {
+    cell2.value = 4;
+    cell3.focus();
+  } else if (cell3.value === "") {
+    cell3.value = 4;
+    cell4.focus();
+  } else if (cell4.value === "") {
+    cell4.value = 4;
+    cell4.focus();
   }
+}
 
-  cell.focus();
+five.onclick = function() {
+  if(cell1.value === "") {
+    cell1.value = 5;
+    cell2.focus();
+  } else if (cell2.value === "") {
+    cell2.value = 5;
+    cell3.focus();
+  } else if (cell3.value === "") {
+    cell3.value = 5;
+    cell4.focus();
+  } else if (cell4.value === "") {
+    cell4.value = 5;
+    cell4.focus();
+  }
+}
+
+six.onclick = function() {
+  if(cell1.value === "") {
+    cell1.value = 6;
+    cell2.focus();
+  } else if (cell2.value === "") {
+    cell2.value = 6;
+    cell3.focus();
+  } else if (cell3.value === "") {
+    cell3.value = 6;
+    cell4.focus();
+  } else if (cell4.value === "") {
+    cell4.value = 6;
+    cell4.focus();
+  }
+}
+
+seven.onclick = function() {
+  if(cell1.value === "") {
+    cell1.value = 7;
+    cell2.focus();
+  } else if (cell2.value === "") {
+    cell2.value = 7;
+    cell3.focus();
+  } else if (cell3.value === "") {
+    cell3.value = 7;
+    cell4.focus();
+  } else if (cell4.value === "") {
+    cell4.value = 7;
+    cell4.focus();
+  }
+}
+
+eight.onclick = function() {
+  if(cell1.value === "") {
+    cell1.value = 8;
+    cell2.focus();
+  } else if (cell2.value === "") {
+    cell2.value = 8;
+    cell3.focus();
+  } else if (cell3.value === "") {
+    cell3.value = 8;
+    cell4.focus();
+  } else if (cell4.value === "") {
+    cell4.value = 8;
+    cell4.focus();
+  }
+}
+
+nine.onclick = function() {
+  if(cell1.value === "") {
+    cell1.value = 9;
+    cell2.focus();
+  } else if (cell2.value === "") {
+    cell2.value = 9;
+    cell3.focus();
+  } else if (cell3.value === "") {
+    cell3.value = 9;
+    cell4.focus();
+  } else if (cell4.value === "") {
+    cell4.value = 9;
+    cell4.focus();
+  }
+}
+
+zero.onclick = function() {
+  if(cell1.value === "") {
+    cell1.value = 0;
+    cell2.focus();
+  } else if (cell2.value === "") {
+    cell2.value = 0;
+    cell3.focus();
+  } else if (cell3.value === "") {
+    cell3.value = 0;
+    cell4.focus();
+  } else if (cell4.value === "") {
+    cell4.value = 0;
+    cell4.focus();
+  }
+}
+
+fix.onclick = function() {
+  if (cell1.value && cell2.value && cell3.value && cell4.value) {
+    cell4.value = "";
+    cell4.focus();
+  } else if (cell1.value && cell2.value && cell3.value) {
+    cell3.value = "";
+    cell3.focus();
+  } else if (cell1.value && cell2.value) {
+    cell2.value = "";
+    cell2.focus();
+  } else if (cell1.value) {
+    cell1.value = "";
+    cell1.focus();
+  }
 }
 
 function validate(evt) {//содрано со stackoverflow
