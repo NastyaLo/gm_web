@@ -200,19 +200,16 @@ fix.onclick = function() {
 document.onkeyup = function (e) {
   if (e.keyCode == 8) {
     correction();
+    console.log("keyup backspace");
   } else if (e.keyCode >= 48 && e.keyCode <= 57) {
 
     if (cell1.value && cell2.value && cell3.value) {
-      console.log("focus on 4");
       cell4.focus();
     } else if (cell1.value && cell2.value) {
-      console.log("focus on 3");
       cell3.focus();
     } else if (cell1.value){
-      console.log("focus on 2");
       cell2.focus();
     } else {
-      console.log("focus on 1");
       cell1.focus();
     }
 
