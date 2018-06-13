@@ -197,24 +197,22 @@ fix.onclick = function() {
   correction();
 }
 
-document.onkeyup = function (e) {
-  if (e.keyCode == 8) {
-    correction();
-    console.log("keyup backspace");
-  } else if (e.keyCode >= 48 && e.keyCode <= 57) {
-
-    if (cell1.value && cell2.value && cell3.value) {
-      cell4.focus();
-    } else if (cell1.value && cell2.value) {
-      cell3.focus();
-    } else if (cell1.value){
-      cell2.focus();
-    } else {
-      cell1.focus();
-    }
-
-  }
-}
+document.onkeydown = function(e){
+	if (e.keyCode == 8) {
+        	e.preventDefault();
+		correction();
+	}else if((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)){
+		if (cell1.value && cell2.value && cell3.value) {
+		  cell4.focus();
+		} else if (cell1.value && cell2.value) {
+		  cell3.focus();
+		} else if (cell1.value){
+		  cell2.focus();
+		} else {
+		  cell1.focus();
+		}
+	}
+};
 
 function validate(evt) {//содрано со stackoverflow
   var theEvent = evt || window.event;
