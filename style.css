@@ -32,3 +32,198 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
+
+.last-operations__header {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+
+  grid-row: 1;
+  grid-column: 1 / 4;
+  justify-self: center;
+
+  margin-top: 30px;
+  padding: 13px;
+
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.25);
+  border-radius: 5px;
+}
+
+.currency-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-blend-mode: multiply;
+  background-image: url("images/aflag.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+
+  width: 180px;
+  height: 110px;
+
+  margin-right: 100px;
+}
+
+.currency-block__icon {
+  position: absolute;
+  top: 123px;
+  left: 94px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.currence-block__amount {
+  width: 100%;
+  font-family: "Calibri";
+  font-size: 40px;
+  color: white;
+
+  text-align: center;
+}
+
+.last-operations__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding-left: 20px;
+}
+
+.last-operations__title>span {
+  margin-bottom: 20px;
+
+  color: white;
+  font-family: "Calibri";
+  font-size: 30px;
+  letter-spacing: 0.8px;
+  font-weight: lighter;
+}
+
+.last-operations__beauty {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.last-operations__beauty span {
+  width: 90px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.last-operations__beauty img {
+  transform: rotate(180deg);
+  width: 30px;
+  height: 17px;
+}
+
+.current-card {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  background-color: #3d8366;
+
+  border-radius: 5px;
+  padding: 10px;
+
+  width: 180px;
+  height: 110px;
+
+  margin-left: 100px;
+}
+
+.current-card__chip {
+  position: absolute;
+  top: 150px;
+  left: 765px;
+
+  width: 50px;
+  height: 35px;
+}
+
+.current-card__bank {
+  width: 90px;
+  height: auto;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 265px;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 5px;
+  box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.15);
+
+  color: white;
+  font-family: "Calibri";
+  font-size: 30px;
+  letter-spacing: 0.8px;
+  font-weight: lighter;
+}
+
+.conclusion {
+  grid-row: 2;
+  grid-column: 1 / 2;
+  justify-self: end;
+
+  margin-left: 20px;
+}
+
+.replenishment {
+  grid-row: 3;
+  grid-column: 1 / 2;
+  justify-self: end;
+
+  margin-left: 20px;
+}
+
+.contribution {
+  grid-row: 2;
+  grid-column: 3 / 4;
+  justify-self: start;
+
+  margin-right: 20px;
+}
+
+.transfer {
+  grid-row: 3;
+  grid-column: 3 / 4;
+  justify-self: start;
+
+  margin-right: 20px;
+}
+
+.last-operations__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 2;
+
+  grid-row: 2 / 4;
+  grid-column: 2 / 3;
+
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.25);
+
+  margin-left: 20px;
+  margin-right: 20px;
+}
