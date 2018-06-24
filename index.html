@@ -15,7 +15,7 @@
         <div class="last-operations__header">
           <div class="currency-block">
             <img src="images/aflag.png" class="currency-block__icon">
-            <span class="currence-block__amount"><span>1110.5</span> <span>$</span></span><!-- TODO: auto font-size -->
+            <span class="currence-block__amount"><span id="money">1110.5</span> <span>$</span></span><!-- TODO: auto font-size -->
           </div>
           <div class="last-operations__title">
             <span>Последние операции</span>
@@ -26,22 +26,42 @@
             </div>
           </div>
           <div class="current-card">
-            <img src="images/chip.svg" class="current-card__chip">
+            <img src="images/chip.png" class="current-card__chip">
             <img src="images/card-logo.png" class="current-card__bank">
+            <span class="card__number" id="card__number">1111 1111 1111 1111</span>
+            <span class="owner-name" id="owner-name">name</span>
           </div>
         </div>
         <div class="last-operations__main">
           <div class="last-operations__card">
-            <img src="" alt="">
-            <span class="last-operations__sum">-100$</span>
-            <span class="last-operations__time">19:03</span>
-            <span class="last-operations__name">Withdrawals from ATM</span>
+            <img src="images/cash.svg" class="last-operations__card__img">
+            <span class="last-operations__sum" id="sumWindow1">-100<span class="currency__name" id="currencyPinWindow1">$</span></span>
+            <span class="last-operations__time" id="timeWindow1">19:03</span>
+            <span class="last-operations__name" id="sourseWindow1">Withdrawals from ATM</span>
+          </div>
+          <div class="last-operations__card">
+            <img src="images/cash.svg" class="last-operations__card__img">
+            <span class="last-operations__sum"id="sumWindow2">+200<span class="currency__name" id="currencyPinWindow2">$</span></span>
+            <span class="last-operations__time" id="timeWindow2">19:00</span>
+            <span class="last-operations__name" id="sourseWindow2">Deposit from ATM</span>
+          </div>
+          <div class="last-operations__card">
+            <img src="images/cash.svg" class="last-operations__card__img">
+            <span class="last-operations__sum" id="sumWindow3">-1000<span class="currency__name"  id="currencyPinWindow3">$</span></span>
+            <span class="last-operations__time" id="timeWindow3">18:43</span>
+            <span class="last-operations__name"  id="sourseWindow3">Withdrawals from ATM</span>
+          </div>
+          <div class="last-operations__card">
+            <img src="images/cash.svg" class="last-operations__card__img">
+            <span class="last-operations__sum" id="sumWindow4" >-10<spam class="currency__name"  id="currencyPinWindow4">$</span></span>
+            <span class="last-operations__time" id="timeWindow4">18:03</span>
+            <span class="last-operations__name" id="sourseWindow4">Withdrawals from ATM</span>
           </div>
         </div>
-        <div class="conclusion button">Вывод</div>
-        <div class="replenishment button">Пополнение</div>
-        <div class="contribution button">Вклады</div>
-        <div class="transfer button">Перевод</div>
+        <a href="#" class="conclusion button">Вывод</a>
+        <a href="#" class="replenishment button">Пополнение</a>
+        <a href="#" class="contribution button">Вклады</a>
+        <a href="#" class="transfer button">Перевод</a>
       </div>
     </div>
     <script src="main.js" charset="utf-8"></script>
