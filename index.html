@@ -11,7 +11,7 @@
       <div class="screen__header">
         <img src="images/ATM.png">
       </div>
-      <div class="screen__body">
+      <div class="screen__body" id="ATM__body">
         <div class="last-operations__header">
           <div class="currency-block">
             <img src="images/aflag.png" class="currency-block__icon">
@@ -58,10 +58,45 @@
             <span class="last-operations__name" id="sourseWindow4">Withdrawals from ATM</span>
           </div>
         </div>
-        <a href="#" class="conclusion button">Вывод</a>
-        <a href="#" class="replenishment button">Пополнение</a>
-        <a href="#" class="contribution button">Вклады</a>
-        <a href="#" class="transfer button">Перевод</a>
+        <a href="#" class="conclusion button" onclick="toPinpad()">Вывод</a>
+        <a href="#" class="replenishment button" onclick="toPinpad()">Пополнение</a>
+        <a href="#" class="contribution button" onclick="toPinpad()">Вклады</a>
+        <a href="#" class="transfer button" onclick="toPinpad()">Перевод</a>
+      </div>
+      <div class="screen__body" id="pinpad__body">
+        <div class="screen__pin-panel">
+          <div class="screen__pin-panel__title">Введите ПИНКОД</div>
+          <img src="images/top-arrow.png" class="arrow">
+          <div class="screen__input">
+            <input type="text" maxlength="1" onkeypress='validate(event)' class="screen__cell" id="screen__cell--1">
+            <input type="text" maxlength="1" onkeypress='validate(event)' class="screen__cell" id="screen__cell--2">
+            <input type="text" maxlength="1" onkeypress='validate(event)' class="screen__cell" id="screen__cell--3">
+            <input type="text" maxlength="1" onkeypress='validate(event)' class="screen__cell" id="screen__cell--4">
+            <!-- <input type="text" onkeypress='validate(event)' maxlength="4" class="screen__cell__input" id="screen__cell__input"> -->
+          </div>
+          <div class="screen__buttons">
+            <div class="screen__button screen__button__column--1" id="screen__button--1">1</div>
+            <div class="screen__button screen__button__column--2" id="screen__button--2">2</div>
+            <div class="screen__button screen__button__column--3" id="screen__button--3">3</div>
+            <div class="screen__button screen__button__column--1" id="screen__button--4">4</div>
+            <div class="screen__button screen__button__column--2" id="screen__button--5">5</div>
+            <div class="screen__button screen__button__column--3" id="screen__button--6">6</div>
+            <div class="screen__button screen__button__column--1" id="screen__button--7">7</div>
+            <div class="screen__button screen__button__column--2" id="screen__button--8">8</div>
+            <div class="screen__button screen__button__column--3" id="screen__button--9">9</div>
+            <div class="screen__button screen__button__column--2" id="screen__button--0">0</div>
+            <img src="images/double-arrow-left.svg" class="screen__button screen__button__column--3" id="screen__button__arrow">
+          </div>
+        </div>
+        <div class="screen__forgot">
+          <div class="screen__forgot__title">Забыли ПИНКОД?</div>
+          <img src="images/phone.png" class="screen__forgot__phone">
+          <div class="screen__forgot__text">Мы отправим сообщение с пинкодом на привязанный к карте номер.</div>
+          <div class="line--white"></div>
+          <form class="" action="index.html" method="post">
+            <button type="button" name="button" class="screen__forgot__button">Отправить</button>
+          </form>
+        </div>
       </div>
     </div>
     <script src="main.js" charset="utf-8"></script>

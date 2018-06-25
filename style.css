@@ -33,6 +33,22 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+#ATM__body {
+  display: grid;
+}
+
+#ATM__body.atmOff {
+  display: none;
+}
+
+#pinpad__body {
+  display: none;
+}
+
+#pinpad__body.pinpadOn {
+  display: grid;
+}
+
 .last-operations__header {
   display: flex;
   justify-content: space-between;
@@ -81,12 +97,14 @@
 }
 
 .currence-block__amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+
   font-family: "Calibri";
   font-size: 40px;
   color: white;
-
-  text-align: center;
 }
 
 .last-operations__title {
@@ -318,4 +336,194 @@
 
   position: relative;
   top: -45px;
+}
+
+.screen__pin-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+
+  width: 270px;
+  height: 480px;
+
+  margin-top: 30px;
+  margin-left: 270px;
+
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.25);
+}
+
+.screen__pin-panel__title {
+  margin-top: 30px;
+  margin-bottom: 25px;
+
+  color: var(--text);
+  font-family: "no_name";
+  font-size: 28px;
+}
+
+.arrow {
+  display: block;
+
+  width: 30px;
+  height: 15px;
+
+  margin-bottom: 60px;
+}
+
+.screen__input {
+  display: grid;
+  grid-template-columns: repeat(4, 30px);
+  grid-column-gap: 8px;
+
+  margin-bottom: 80px;
+}
+
+.screen__cell {
+  width: 30px;
+  height: 40px;
+
+  padding: 0;
+
+  border: none;
+  outline: none;
+  background: none;
+
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.65);
+
+  text-align: center;
+  color: transparent;
+  text-shadow: 0 0 0 #cbe1df;
+  font-family: "no_name";
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.screen__buttons {
+  display: grid;
+  width: 150px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 15px;
+}
+
+.screen__button {
+  color: var(--text);
+  font-family: "no_name";
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.screen__button:hover,
+.screen__button:focus,
+.screen__button:active {
+  cursor: pointer;
+}
+
+.screen__button__column--1 {
+  justify-self: start;
+}
+
+.screen__button__column--2 {
+  justify-self: center;
+}
+
+.screen__button__column--3 {
+  justify-self: end;
+}
+
+#screen__button--0 {
+  grid-column: 2 / 3;
+}
+
+#screen__button__arrow {
+  grid-column: 3 / 4;
+  width: 19px;
+  height: 19px;
+  align-self: center;
+}
+
+.screen__forgot {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+
+  margin-top: 80px;
+  padding-top: 30px;
+
+  width: 225px;
+  height: 345px;
+
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.05);
+}
+
+.screen__forgot__title {
+  color: var(--text);
+  font-family: "no_name";
+  font-size: 22px;
+}
+
+.screen__forgot__phone {
+  margin-top: 10px;
+  height: 125px;
+}
+
+.screen__forgot__text {
+  max-width: 185px;
+  margin-top: 20px;
+
+  text-align: center;
+  color: var(--text);
+  font-family: "Calibri";
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.line--white {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+}
+
+.screen__forgot .line--white {
+  margin-top: 30px;
+}
+
+.screen__forgot__button {
+  margin-top: 20px;
+
+  width: 150px;
+  height: 40px;
+
+  outline: none;
+  border: none;
+
+  border-radius: 20px;
+
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.05);
+
+  text-align: center;
+  color: white;
+  font-family: "Calibri";
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.fs-25 {
+  font-size: 25px;
+}
+
+.fs-40 {
+  font-size: 40px;
+}
+
+@font-face {
+    font-family: "no_name";
+    src: url(../fonts/no-name.otf);
 }
