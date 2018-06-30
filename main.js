@@ -142,10 +142,12 @@ var one       = document.getElementById("screen__button--1"),
     zero      = document.getElementById("screen__button--0"),
     fix       = document.getElementById("screen__button__arrow");
 
-var cell1      = document.getElementById("screen__cell--1"),
-    cell2      = document.getElementById("screen__cell--2"),
-    cell3      = document.getElementById("screen__cell--3"),
-    cell4      = document.getElementById("screen__cell--4");
+var cell1               = document.getElementById("screen__cell--1"),
+    cell2               = document.getElementById("screen__cell--2"),
+    cell3               = document.getElementById("screen__cell--3"),
+    cell4               = document.getElementById("screen__cell--4"),
+    wrongPassword       = document.getElementById("wrong"),
+    screenPanel         = document.getElementById("screen-panel");
 
 cell1.focus();
 
@@ -357,12 +359,50 @@ function validate(evt) {//содрано со stackoverflow
   }
 }
 
+function checkPassword (pin) {
+  if (pin) {
+    nextScreen();
+    screenPanel.classList.remove("red-s");
+    wrongPassword.classList.remove("open");
+    cell1.classList.remove("red-b");
+    cell2.classList.remove("red-b");
+    cell3.classList.remove("red-b");
+    cell4.classList.remove("red-b");
+  } else {
+    screenPanel.classList.add("red-s");
+    wrongPassword.classList.add("open");
+    cell1.classList.add("red-b");
+    cell2.classList.add("red-b");
+    cell3.classList.add("red-b");
+    cell4.classList.add("red-b");
+  }
+}
+
+function checkActivity(cardNumber) {
+  if (!cardNumber) {
+    locked.classList.add("open");
+    cell1.classList.add("red-b");
+    cell2.classList.add("red-b");
+    cell3.classList.add("red-b");
+    cell4.classList.add("red-b");
+    screenPanel.classList.add("red-s");
+  } else {
+    locked.classList.remove("open");
+    screenPanel.classList.remove("red-s");
+    cell1.classList.remove("red-b");
+    cell2.classList.remove("red-b");
+    cell3.classList.remove("red-b");
+    cell4.classList.remove("red-b");
+  }
+}
+
 //JavaScript to change screens
 
-var ATMBody     = document.getElementById("ATM__body"),
-    PinPadBody     = document.getElementById("pinpad__body");
+var ATMBody        = document.getElementById("ATM__body"),
+    PinPadBody     = document.getElementById("pinpad__body"),
+    next           = document.getElementById("ok");
 
-function toPinpad() {
-  ATMBody.classList.add("atmOff");
-  PinPadBody.classList.add("pinpadOn");
+next.onclick = function nextScreen() {
+  PinPadBody.classList.add("pinpadOff");
+  ATMBody.classList.add("atmOn");
 }

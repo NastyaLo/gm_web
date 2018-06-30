@@ -15,7 +15,7 @@
         <div class="last-operations__header">
           <div class="currency-block">
             <img src="images/aflag.png" class="currency-block__icon">
-            <span class="currence-block__amount"><span id="money">1110.5</span> <span>$</span></span><!-- TODO: auto font-size -->
+            <span class="currence-block__amount"><span id="money">1110.5</span> <span>$</span></span>
           </div>
           <div class="last-operations__title">
             <span>Последние операции</span>
@@ -64,7 +64,13 @@
         <a href="#" class="transfer button" onclick="toPinpad()">Перевод</a>
       </div>
       <div class="screen__body" id="pinpad__body">
-        <div class="screen__pin-panel">
+        <div class="screen__pin-panel" id="screen-panel">
+          <div class="wrong" id="wrong">
+            Неправильный пароль
+          </div>
+          <div class="locked" id="locked">
+            Карта заблокирована
+          </div>
           <div class="screen__pin-panel__title">Введите ПИНКОД</div>
           <img src="images/top-arrow.png" class="arrow">
           <div class="screen__input">
@@ -84,6 +90,7 @@
             <div class="screen__button screen__button__column--1" id="screen__button--7">7</div>
             <div class="screen__button screen__button__column--2" id="screen__button--8">8</div>
             <div class="screen__button screen__button__column--3" id="screen__button--9">9</div>
+            <div src="images/login.svg" class="screen__ok" id="ok">0K</div>
             <div class="screen__button screen__button__column--2" id="screen__button--0">0</div>
             <img src="images/double-arrow-left.svg" class="screen__button screen__button__column--3" id="screen__button__arrow">
           </div>
