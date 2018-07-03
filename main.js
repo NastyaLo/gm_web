@@ -147,7 +147,8 @@ var cell1               = document.getElementById("screen__cell--1"),
     cell3               = document.getElementById("screen__cell--3"),
     cell4               = document.getElementById("screen__cell--4"),
     wrongPassword       = document.getElementById("wrong"),
-    screenPanel         = document.getElementById("screen-panel");
+    screenPanel         = document.getElementById("screen-panel"),
+    pin                 = "";
 
 cell1.focus();
 
