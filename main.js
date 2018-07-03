@@ -401,9 +401,16 @@ function checkActivity(cardNumber) {
 
 var ATMBody        = document.getElementById("ATM__body"),
     PinPadBody     = document.getElementById("pinpad__body"),
-    next           = document.getElementById("ok");
+    next           = document.getElementById("ok"),
+    pin            = "";
+
+function whatPin () {
+  pin = cell1.value + cell2.value + cell3.value + cell4.value;
+  console.log(pin);
+}
 
 next.onclick = function nextScreen() {
+  whatPin();
   PinPadBody.classList.add("pinpadOff");
   ATMBody.classList.add("atmOn");
 }
