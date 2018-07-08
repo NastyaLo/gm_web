@@ -159,7 +159,7 @@ body {
   align-items: flex-end;
 
   position: relative;
-
+  
   background-color: white;
 
   border-radius: 5px;
@@ -353,7 +353,7 @@ body {
   flex-direction: column;
   align-items: center;
   z-index: 2;
-
+  
   position: relative;
 
   width: 270px;
@@ -445,13 +445,11 @@ body {
   justify-self: end;
 }
 
-#screen__button--0,
-#screen__button--00 {
+#screen__button--0 {
   grid-column: 2 / 3;
 }
 
-#screen__button__arrow,
-#screen__button__arrow1 {
+#screen__button__arrow {
   grid-column: 3 / 4;
   width: 19px;
   height: 19px;
@@ -537,8 +535,7 @@ body {
   font-size: 40px;
 }
 
-.wrong,
-.not-enough {
+.wrong {
   display: none;
   position: absolute;
   top: 119px;
@@ -552,10 +549,6 @@ body {
 }
 
 .wrong.open {
-  display: block;
-}
-
-.not-enough.open {
   display: block;
 }
 
@@ -617,55 +610,4 @@ body {
 
 #ATM__body.atmOn {
   display: grid;
-}
-
-#money__body {
-	display: none;
-	position: relative;
-}
-
-#money__body.moneyBodyOn {
-	display: grid;
-}
-
-#money__body.screen__body {
-	grid-template-columns: auto;
-	justify-content: center;
-}
-
-#money__body .screen__pin-panel {
-	margin-left: 0;
-}
-
-#money__body .screen__pin-panel__title {
-	max-width: 245px;
-	text-align: center;
-}
-
-#money__body .arrow {
-	margin-bottom: 20px;
-}
-
-#money__body .screen__input {
-	grid-template-columns: 1fr;
-}
-
-#money__body .screen__cell {
-	width: 165px;
-}
-
-.arrow-back {
-	position: absolute;
-	padding: 10px 20px 10px 20px;
-	cursor: pointer;
-
-	top: 30px;
-	left: 20px;
-
-	background-color: rgba(255, 255, 255, 0.05);
-	box-shadow: 0px 0px 75px 0px rgba(0,0,0,0.25);
-
-	color: var(--text);
-  font-family: "no_name";
-  font-size: 23px;
 }

@@ -362,10 +362,10 @@ function validate(evt) {//содрано со stackoverflow
 }
 
 function checkPassword (pin) {
-
+	
   if (pin) {
     PinPadBody.classList.add("pinpadOff");
-	  ATMBody.classList.add("atmOn");
+	ATMBody.classList.add("atmOn");
     screenPanel.classList.remove("red-s");
     wrongPassword.classList.remove("open");
     cell1.classList.remove("red-b");
@@ -382,7 +382,7 @@ function checkPassword (pin) {
   }
 }
 
-
+	
 
 function checkActivity(cardNumber) {
   if (!cardNumber) {
@@ -402,101 +402,12 @@ function checkActivity(cardNumber) {
   }
 }
 
-//JavaScript to close window
-
-function exit(){
-	mp.trigger("exitAtm");
-}
-
-//JavaScript to enter amount
-
-var one1       = document.getElementById("screen__button--11"),
-    two2       = document.getElementById("screen__button--22"),
-    three3     = document.getElementById("screen__button--33"),
-    four4      = document.getElementById("screen__button--44"),
-    five5      = document.getElementById("screen__button--55"),
-    six6       = document.getElementById("screen__button--66"),
-    seven7     = document.getElementById("screen__button--77"),
-    eight8     = document.getElementById("screen__button--88"),
-    nine9      = document.getElementById("screen__button--99"),
-    zero0      = document.getElementById("screen__button--00"),
-    fix1       = document.getElementById("screen__button__arrow1");
-
-var cellMoney           = document.getElementById("screen__cell--money"),
-    notEnough           = document.getElementById("not-enough"),
-    amount              = "";
-
-cellMoney.focus();
-
-one1.onclick = function() {
-    cellMoney.value += 1;
-}
-
-two2.onclick = function() {
-  cellMoney.value += 2;
-}
-
-three3.onclick = function() {
-  cellMoney.value += 3;
-}
-
-four4.onclick = function() {
-  cellMoney.value += 4;
-}
-
-five5.onclick = function() {
-  cellMoney.value += 5;
-}
-
-six6.onclick = function() {
-  cellMoney.value += 6;
-}
-
-seven7.onclick = function() {
-  cellMoney.value += 7;
-}
-
-eight8.onclick = function() {
-  cellMoney.value += 8;
-}
-
-nine9.onclick = function() {
-  cellMoney.value += 9;
-}
-
-zero0.onclick = function() {
-  cellMoney.value += 0;
-}
-
-function correction() {
-  cellMoney.value = cellMoney.value.substring(0, cellMoney.value.length - 1)
-}
-
-fix1.onclick = function() {
-  correction();
-}
-
-document.onkeydown = function(e){
-	if (e.keyCode == 8) {
-        	e.preventDefault();
-		correction();
-	}else if((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)){
-		cellMoney.focus();
-	}
-};
-
 //JavaScript to change screens
 
 var ATMBody        = document.getElementById("ATM__body"),
     PinPadBody     = document.getElementById("pinpad__body"),
-    moneyBody      = document.getElementById("money__body"),
     next           = document.getElementById("ok"),
-    transfer       = document.getElementById("ok1"),
-    screenPanel1   = document.getElementById("screen-panel1"),
-    operationTitle = document.getElementById("operation__title"),
-    arrowBack      = document. getElementById("arrow-back"),
-    pin            = "",
-    transferAmount = 0;
+    pin            = "";
 
 function whatPin () {
   pin = cell1.value + cell2.value + cell3.value + cell4.value;
@@ -504,34 +415,17 @@ function whatPin () {
 }
 
 next.onclick = function nextScreen() {
-
+	
 	whatPin();
 	if(pin)
 		mp.trigger("checkPIN", cardNumberValue, pin);
 	else
 		checkPassword(0);
-
+	
 }
 
-function whatAmount() {
-  transferAmount = cellMoney.value;
-  console.log(transferAmount);
-}
+//JavaScript to close window
 
-function notEnoughServer() {
-  notEnough.classList.add("open");
-  screenPanel1.classList.add("red-s");
-  cellMoney.classList.add("red-b");
-}
-
-function enterAmount(operationName) {
-  ATMBody.classList.remove('atmOn');
-  moneyBody.classList.add('moneyBodyOn');
-  notEnough.classList.remove("open");
-  operationTitle.innerHTML = "Введите сумму для " + operationName;
-}
-
-arrowBack.onclick = function prevWindow() {
-  ATMBody.classList.add('atmOn');
-  moneyBody.classList.remove('moneyBodyOn');
+function exit(){
+	mp.trigger("exitAtm");
 }
