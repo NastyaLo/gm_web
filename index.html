@@ -59,10 +59,10 @@
             <span class="last-operations__name" id="sourseWindow4">Withdrawals from ATM</span>
           </div>
         </div>
-        <a href="#" class="conclusion button" onclick="enterAmount('вывода')">Вывод</a>
-        <a href="#" class="replenishment button" onclick="enterAmount('пополнения')">Пополнение</a>
-        <a href="#" class="contribution button" onclick="enterAmount('вклада')">Вклады</a>
-        <a href="#" class="transfer button" onclick="enterAmount('перевода')">Перевод</a>
+        <a href="#" class="conclusion button" onclick="toPinpad()">Вывод</a>
+        <a href="#" class="replenishment button" onclick="toPinpad()">Пополнение</a>
+        <a href="#" class="contribution button" onclick="toPinpad()">Вклады</a>
+        <a href="#" class="transfer button" onclick="toPinpad()">Перевод</a>
       </div>
       <div class="screen__body" id="pinpad__body">
         <div class="screen__pin-panel" id="screen-panel">
@@ -104,33 +104,6 @@
           <form class="" action="index.html" method="post">
             <button type="button" name="button" class="screen__forgot__button">Отправить</button>
           </form>
-        </div>
-      </div>
-      <div class="screen__body" id="money__body">
-        <div class="arrow-back" id="arrow-back">Назад</div>
-        <div class="screen__pin-panel" id="screen-panel1">
-          <div class="not-enough" id="not-enough">
-            Недостаточно средств
-          </div>
-          <div class="screen__pin-panel__title" id="operation__title"></div>
-          <img src="images/top-arrow.png" class="arrow">
-          <div class="screen__input">
-            <input type="text" onkeypress='validate(event)' class="screen__cell" id="screen__cell--money">
-          </div>
-          <div class="screen__buttons">
-            <div class="screen__button screen__button__column--1" id="screen__button--11">1</div>
-            <div class="screen__button screen__button__column--2" id="screen__button--22">2</div>
-            <div class="screen__button screen__button__column--3" id="screen__button--33">3</div>
-            <div class="screen__button screen__button__column--1" id="screen__button--44">4</div>
-            <div class="screen__button screen__button__column--2" id="screen__button--55">5</div>
-            <div class="screen__button screen__button__column--3" id="screen__button--66">6</div>
-            <div class="screen__button screen__button__column--1" id="screen__button--77">7</div>
-            <div class="screen__button screen__button__column--2" id="screen__button--88">8</div>
-            <div class="screen__button screen__button__column--3" id="screen__button--99">9</div>
-            <div src="images/login.svg" class="screen__ok" onclick="whatAmount()" id="ok1">0K</div>
-            <div class="screen__button screen__button__column--2" id="screen__button--00">0</div>
-            <img src="images/double-arrow-left.svg" class="screen__button screen__button__column--3" id="screen__button__arrow1">
-          </div>
         </div>
       </div>
     </div>
